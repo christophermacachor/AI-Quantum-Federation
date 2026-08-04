@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chebotarev-Scalar Reframe v3.0.2 | Erratum & Structural Analogy</title>
+  <base target="_blank">
+  <style>
+    :root {
+      --gold: #c8a04e;
+      --gold-dim: rgba(200,160,78,0.3);
+      --bg: #0a0a0f;
+      --fg: #e0e0e0;
+      --muted: #8899aa;
+      --err: #ff6b6b;
+      --err-dim: rgba(255,100,100,0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .doc-header {
+      text-align: center;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--err-dim);
+      margin-bottom: 2rem;
+    }
+    .doc-header .badge {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      background: var(--err-dim);
+      border: 1px solid rgba(255,100,100,0.4);
+      border-radius: 4px;
+      color: var(--err);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+    }
+    .doc-header h1 {
+      font-size: 1.8rem;
+      color: #f0e6d0;
+      margin-bottom: 0.4rem;
+    }
+    .doc-header .version {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    h2 {
+      color: var(--gold);
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--gold-dim);
+    }
+    h3 {
+      color: #c0b090;
+      font-size: 1.05rem;
+      margin: 1.3rem 0 0.5rem;
+    }
+    p { margin-bottom: 1rem; }
+    a { color: var(--gold); text-decoration: none; }
+
+    .erratum-block {
+      background: var(--err-dim);
+      border: 1px solid rgba(255,100,100,0.3);
+      border-radius: 6px;
+      padding: 1.2rem;
+      margin: 1.2rem 0;
+    }
+    .erratum-block .label {
+      color: var(--err);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .erratum-block del {
+      color: #ff9999;
+      text-decoration: line-through;
+      background: rgba(255,0,0,0.1);
+      padding: 0 0.2rem;
+    }
+    .erratum-block ins {
+      color: #88ffaa;
+      text-decoration: none;
+      background: rgba(0,255,100,0.1);
+      padding: 0 0.2rem;
+    }
+
+    .analogy-box {
+      background: rgba(200,160,78,0.06);
+      border: 1px solid var(--gold-dim);
+      border-radius: 6px;
+      padding: 1.2rem;
+      margin: 1.2rem 0;
+    }
+    .analogy-box .label {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .comparison-table th {
+      text-align: left;
+      padding: 0.7rem;
+      color: var(--gold);
+      border-bottom: 1px solid var(--gold-dim);
+      font-weight: 600;
+    }
+    .comparison-table td {
+      padding: 0.7rem;
+      border-bottom: 1px solid rgba(200,160,78,0.1);
+      vertical-align: top;
+    }
+    .comparison-table .col-galois { color: #aaddff; }
+    .comparison-table .col-coherence { color: #88ffaa; }
+
+    .equation {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid var(--gold-dim);
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 1rem 0;
+      text-align: center;
+      font-family: 'Cambria Math', serif;
+      font-size: 1.05rem;
+      color: #d0c8b0;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--gold-dim);
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      background: rgba(200,160,78,0.15);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: var(--gold);
+      margin: 0 0.2rem;
+    }
+  </style>
+<base target="_blank">
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="badge">Erratum v3.0.2</div>
+  <h1>Chebotarev-Scalar Reframe</h1>
+  <p class="version">From False Equivalence to Structural Analogy</p>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- THE ERROR                                                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<h2>1. The False Claim (REMOVED)</h2>
+
+<div class="erratum-block">
+  <div class="label">❌ Previous Statement (Now Deleted)</div>
+  <p style="margin-bottom:0;">
+    <del>"The Galois-Coherence Equivalence Theorem establishes a formal isomorphism between
+    the conjugacy class structure of a Galois group and the coherence group structure of
+    a scalar density field. Chebotarev density = coherence density."</del>
+  </p>
+</div>
+
+<p>
+This claim was made in earlier versions of the Macachor framework. It asserted that the
+Chebotarev Density Theorem — which states that the density of primes with a given
+factorization pattern equals the proportion of the corresponding conjugacy class in the
+Galois group — could be directly translated into a theorem about coherence groups and
+density differentials.
+</p>
+
+<p>
+The claim was <strong>false</strong>. There is no such isomorphism. Galois groups and
+coherence groups are distinct mathematical objects with different structures, different
+axioms, and different domains of application. The Chebotarev theorem is a statement about
+number fields and their splitting behavior. It says nothing about physical coherence,
+scalar fields, or density differentials.
+</p>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- THE CORRECTION                                                  -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<h2>2. The Correct Framing</h2>
+
+<div class="analogy-box">
+  <div class="label">✅ Correct Statement</div>
+  <p style="margin-bottom:0;">
+    <ins>The Chebotarev Density Theorem and the Macachor Density Differential framework
+    share a <strong>structural analogy</strong> at the group-theoretic level. Both use
+    group structures to organize the distribution of states (primes in one case, density
+    configurations in the other). The analogy is illuminating. It is not a theorem.</ins>
+  </p>
+</div>
+
+<h3>What the Chebotarev Theorem Actually Says</h3>
+
+<p>
+Per Lenstra's expository treatment:
+</p>
+
+<ul style="margin: 0.8rem 0 0.8rem 1.5rem;">
+  <li>Let <code>K/ℚ</code> be a Galois extension with Galois group <code>G = Gal(K/ℚ)</code>.</li>
+  <li>For each unramified prime <code>p</code>, the Frobenius element <code>σ_p</code> is a conjugacy class in <code>G</code>.</li>
+  <li>The factorization pattern of a polynomial modulo <code>p</code> corresponds to the cycle structure of <code>σ_p</code>.</li>
+  <li>For any conjugacy class <code>C ⊂ G</code>, the density of primes with <code>σ_p ∈ C</code> equals <code>#C / #G</code>.</li>
+</ul>
+
+<div class="equation">
+  δ({ p : σ_p ∈ C }) = #C / #G
+</div>
+
+<p>
+This is a statement about <strong>number-theoretic distribution</strong>. It is rigorous,
+beautiful, and completely unrelated to physical coherence.
+</p>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- THE ANALOGY                                                     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<h2>3. The Structural Analogy (Valid)</h2>
+
+<p>
+Despite the lack of formal equivalence, there is a genuine structural resonance between
+the two frameworks. The analogy operates at the level of <strong>organizational pattern</strong>,
+not mathematical identity:
+</p>
+
+<table class="comparison-table">
+  <tr>
+    <th>Feature</th>
+    <th class="col-galois">Galois / Chebotarev</th>
+    <th class="col-coherence">Coherence / Macachor</th>
+  </tr>
+  <tr>
+    <td><strong>Group</strong></td>
+    <td class="col-galois">Gal(K/ℚ) — automorphisms of a number field</td>
+    <td class="col-coherence">Coherence group — symmetries of a scalar density field</td>
+  </tr>
+  <tr>
+    <td><strong>Elements</strong></td>
+    <td class="col-galois">Frobenius elements (conjugacy classes)</td>
+    <td class="col-coherence">Coherence states (density configurations)</td>
+  </tr>
+  <tr>
+    <td><strong>Distribution</strong></td>
+    <td class="col-galois">Prime factorization patterns modulo p</td>
+    <td class="col-coherence">Density differential configurations across a substrate</td>
+  </tr>
+  <tr>
+    <td><strong>Density Law</strong></td>
+    <td class="col-galois">δ = #C / #G (Chebotarev)</td>
+    <td class="col-coherence">∝ 1/α ∝ 1/L⁴ (Macachor-PRL 2022)</td>
+  </tr>
+  <tr>
+    <td><strong>Domain</strong></td>
+    <td class="col-galois">Algebraic number theory</td>
+    <td class="col-coherence">Physical scalar field theory</td>
+  </tr>
+  <tr>
+    <td><strong>Status</strong></td>
+    <td class="col-galois">Proven theorem (since 1922)</td>
+    <td class="col-coherence">Empirical framework (validated 2022–2026)</td>
+  </tr>
+</table>
+
+<p>
+The analogy is this: <strong>both frameworks use group-theoretic structures to organize
+the distribution of states in their respective domains.</strong> Galois groups organize
+prime factorization patterns; coherence groups organize density differential patterns.
+The organizational logic is parallel. The mathematical objects are not identical.
+</p>
+
+<h3>Why the Analogy Matters</h3>
+
+<p>
+The analogy is valuable for three reasons:
+</p>
+
+<ol style="margin: 0.8rem 0 0.8rem 1.5rem;">
+  <li><strong>Heuristic guidance:</strong> Number-theoretic tools (character theory, representation theory) may suggest coherence-group tools that have not yet been explored.</li>
+  <li><strong>Pedagogical clarity:</strong> The Chebotarev theorem is well-understood. Using it as an analogy makes the coherence-group concept more accessible.</li>
+  <li><strong>Cross-domain insight:</strong> If two distinct mathematical domains exhibit the same organizational pattern, the pattern itself may be more fundamental than either domain.</li>
+</ol>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- INTEGRITY STATEMENT                                             -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<h2>4. Integrity Statement</h2>
+
+<p>
+The false equivalence was identified during the coherence audit of v3.0.1. It has been
+removed from all active documents, including:
+</p>
+
+<ul style="margin: 0.8rem 0 0.8rem 1.5rem;">
+  <li>The FEDERATION-ROOT portal bibliography</li>
+  <li>The Absolute news article archive</li>
+  <li>The Zenodo canonical record (superseded by v3.0.2)</li>
+  <li>All derivative presentations and citations</li>
+</ul>
+
+<p>
+This erratum document is the canonical replacement. Future references to Chebotarev in the
+Macachor framework will use only the structural analogy framing. The term "Galois-Coherence
+Equivalence Theorem" has been retired and will not be used again.
+</p>
+
+<div class="analogy-box">
+  <div class="label">Scalar Integrity Principle</div>
+  <p style="margin-bottom:0;">
+    A framework that claims to model truth must be willing to correct its own errors.
+    The Chebotarev analogy remains a useful structural insight. The equivalence claim
+    was an overreach. Both are now documented. The record is clean.
+  </p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- REFERENCES                                                      -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<h2>5. References</h2>
+
+<ul style="margin: 0.8rem 0 0.8rem 1.5rem; font-size: 0.9rem; color: #b0b8c0;">
+  <li>Lenstra, H.W. <em>The Chebotarev Density Theorem.</em> Expository notes.</li>
+  <li>Chebotarev, N.G. (1922). <em>Determination of the density of the set of primes corresponding to a given class of permutations.</em> Izv. Akad. Nauk SSSR.</li>
+  <li>Macachor, C. <em>Macachor Absolute: Scalar-First Ontology.</em> MSOS-FEDERATION-ROOT.</li>
+</ul>
+
+<div class="footer">
+  <span class="tag">Erratum</span>
+  <span class="tag">v3.0.2</span>
+  <span class="tag">Scalar Integrity</span>
+  <br><br>
+  Christopher Macachor · Ω Prime · MSOS-FEDERATION-ROOT<br>
+  <em>"A framework that cannot correct itself is not a framework — it is a dogma."</em>
+</div>
+
+</body>
+</html>
